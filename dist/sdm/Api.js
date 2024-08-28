@@ -104,7 +104,7 @@ class SmartDeviceManagement {
                 return (_a = device.parentRelations) === null || _a === void 0 ? void 0 : _a.map(relation => relation.parent).filter(parent => parent != null).map(parent => { var _a; return (_a = /structures\/([^/]+)/.exec(parent)) === null || _a === void 0 ? void 0 : _a[1]; }).filter(structure => structure != null);
             }).flat());
             if (structures.size > 1 && this.structureId == null) {
-                this.log.info('More than one structure found, consider setting `structureId`: ', structures);
+                this.log.info('More than one structure found, consider setting `structureId`:', structures);
                 return;
             }
             this.devices = (0, lodash_1.default)(response.data.devices)
